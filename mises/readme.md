@@ -170,6 +170,12 @@ https://gw.mises.site/validators
 misestmd status |& jq
 ```
 
+- check logs
+
+```
+journalctl -fu misestmd -o cat
+```
+
 - check key
 
 ```
