@@ -68,7 +68,7 @@ misestmd init <moniker> --chain-id mainnet
 
 ```
 curl https://e1.mises.site:443/genesis | jq .result.genesis > ~/.misestm/config/genesis.json
-wget -O $HOME/.misestm/config/addrbook.json 
+wget -O $HOME/.misestm/config/addrbook.json https://raw.githubusercontent.com/Genz22/mainnet-node/main/mises/addrbook.json
 ```
 
 ## set peers
