@@ -24,7 +24,7 @@ ufw enable
 ## update packages and install dependences 
 
 ```
-sudo apt update && sudo apt upgrade -y && sudo apt install -y build-essential libssl-dev libffi-dev git curl screen python3.10 python3.10-venv -y
+sudo apt update && sudo apt upgrade -y && sudo apt install build-essential libssl-dev libffi-dev git curl screen python3.10 python3.10-venv -y
 ```
 
 ## Get pip
