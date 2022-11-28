@@ -64,13 +64,14 @@ misestmd version
 misestmd init <moniker> --chain-id mainnet
 ```
 
-## Get genesis
+## Get genesis and addrbook
 
 ```
 curl https://e1.mises.site:443/genesis | jq .result.genesis > ~/.misestm/config/genesis.json
+wget -O $HOME/.misestm/config/addrbook.json 
 ```
 
-## set peer
+## set peers
 
 ```
 PERSISTENT_PEERS="40a8318fa18fa9d900f4b0d967df7b1020689fa0@e1.mises.site:26656"
@@ -87,6 +88,7 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"https://e1.mises.site/:443,http
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\13813000| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"b1095ad6d39c4df5eb337ed7eb9a9af87dfee21390fe9ea52ea00c05d3fc223f\"|"  ~/.misestm/config/config.toml
 ```
+
 
 ## Create key
 
