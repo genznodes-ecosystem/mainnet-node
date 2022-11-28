@@ -63,9 +63,9 @@ flags =
 cat $HOME/newrl/data_mainnet/.auth.json
 ```
 
-import your wallet : https://wallet.newrl.net/
+import your wallet to : https://wallet.newrl.net/
 
-## Import existing wallet
+- Import existing wallet
 
 ```
 python3 scripts/import_wallet.py 
