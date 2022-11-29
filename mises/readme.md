@@ -80,13 +80,12 @@ sed -i.bak -E "s|^(persistent_peers[[:space:]]+=[[:space:]]+).*$|\1\"$PERSISTENT
 
 ## Statesync (optional)
 
-with last block = 13813000
 
 ```
 sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"https://e1.mises.site/:443,https//e2.mises.site:443,https://w1.mises.site:443,https://w2.mises.site:443\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\13813000| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"b1095ad6d39c4df5eb337ed7eb9a9af87dfee21390fe9ea52ea00c05d3fc223f\"|"  ~/.misestm/config/config.toml
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"https://mises-rpc.genznodes.dev:443,https://mises-rpc.genznodes.dev:443\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\3879000| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"0c4ba7267c98141a885de67a7bcee6be0edc8bc62e6db6a4b95446e0bf9f805e\"|"  ~/.misestm/config/config.toml
 ```
 
 
