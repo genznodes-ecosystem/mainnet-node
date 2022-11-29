@@ -88,7 +88,6 @@ screen -rd newrl
 and stop node with : `CTRL + C`
 
 ```
-source newrl-venv/bin/activate
 scripts/install.sh mainnet
 scripts/start.sh mainnet --fullnode
 ```
