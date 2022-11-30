@@ -161,7 +161,9 @@ misestmd tx staking create-validator \
 
 Explore :
 
-https://gw.mises.site/validators
+**OFFICIAL** https://gw.mises.site/validators
+
+or https://explorer.genznodes.dev/mises
 
 ## Useful commands
 
