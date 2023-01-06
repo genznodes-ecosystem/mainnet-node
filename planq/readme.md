@@ -10,7 +10,7 @@
     <img height="100" width="auto" src="https://user-images.githubusercontent.com/94878333/211021651-2a062102-6b16-4169-a537-4aa6606ffe57.jpg">
 </p>
 
-# Guide how to join mainnet mises
+# Guide how to join mainnet Planq
 
 - Hardware requirements
 
