@@ -101,7 +101,7 @@ mv genesis.json ~/.planqd/config/
 - addrbook
 
 ```
-
+curl -o addrbook.json https://raw.githubusercontent.com/Genz22/mainnet-node/main/planq/addrbook.json > $HOME/.planqd/config/addrbook.json
 ```
 
 ## Set peers and seeds
