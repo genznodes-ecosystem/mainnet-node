@@ -113,6 +113,40 @@ PEERS=`curl -sL https://raw.githubusercontent.com/planq-network/networks/main/ma
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.planqd/config/config.toml
 ```
 
+## config pruning
+
+```
+PRUNING="custom"
+PRUNING_KEEP_RECENT="100"
+PRUNING_INTERVAL="10"
+
+sed -i -e "s/^pruning *=.*/pruning = \"$PRUNING\"/" $HOME/.planqd/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \
+\"$PRUNING_KEEP_RECENT\"/" $HOME/.planqd/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \
+\"$PRUNING_INTERVAL\"/" $HOME/.planqd/config/app.toml
+```
+
+## set timeout
+
+```
+TIMEOUT=1s
+
+sed -i -e "s/^timeout_commit *=.*/timeout_commit = \
+\"$TIMEOUT\"/" $HOME/.planqd/config/config.toml
+```
+
+## set inbound and out peers
+
+```
+INBOUND=120
+OUTBOUND=60
+
+sed -i -e "s/^max_num_inbound_peers *=.*/max_num_inbound_peers = \
+\"$INBOUND\"/" $HOME/.planqd/config/config.toml
+sed -i -e "s/^max_num_outbound_peers *=.*/max_num_outbound_peers = \
+\"$OUTBOUND\"/" $HOME/.planqd/config/config.toml
+```
 
 ## create service file and start node
 
@@ -148,25 +182,7 @@ sudo journalctl -fu planqd -o cat
 ## Statesync (optional)
 
 ```
-systemctl stop planqd
-planqd tendermint unsafe-reset-all
-
-SNAP_RPC="https://planq-rpc.genznodes.dev:443"
-
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
-
-PEERS=2ce64749269f6bb15acaaa4abc0712f5e91ed588@82.208.20.91:27656
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.planqd/config/config.toml
-
-sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.planqd/config/config.toml
-
-systemctl restart planqd
-journalctl -fu planqd -o cat
+NA
 ```
 
 ## add keys or import keys
