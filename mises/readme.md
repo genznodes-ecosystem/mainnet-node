@@ -131,7 +131,7 @@ sudo systemctl stop misestmd
 cp $HOME/.misestm/data/priv_validator_state.json $HOME/.misestm/priv_validator_state.json.backup
 misestmd tendermint unsafe-reset-all --home $HOME/.misestm --keep-addr-book
 
-SNAP_RPC="https://human-rpc.genznodes.dev:443"
+SNAP_RPC="https://mises-rpc.genznodes.dev:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
