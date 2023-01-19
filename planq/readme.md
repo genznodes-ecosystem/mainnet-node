@@ -66,7 +66,7 @@ go version
 git clone https://github.com/planq-network/planq.git
 cd planq
 git fetch
-git checkout v1.0.2
+git checkout v1.0.3
 make install
 ```
 
