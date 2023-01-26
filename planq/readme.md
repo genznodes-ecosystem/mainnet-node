@@ -36,7 +36,7 @@ echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
-echo "export NOLUS_CHAIN_ID=nolus-rila" >> $HOME/.bash_profile
+echo "export PLANQ_CHAIN_ID=planq_7070-2" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
