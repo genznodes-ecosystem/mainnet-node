@@ -9,7 +9,7 @@
     <img height="100" width="auto" src="https://user-images.githubusercontent.com/94878333/204346560-59540b94-deb2-4b2b-bde8-0bd967d004d0.png">
 </p>
 
-# Guide how to join mainnet mises
+# Guide how to join mainnet
 
 Requiretments 
 
